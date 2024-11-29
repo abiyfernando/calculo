@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="index.html">Calculo Diferencial</a></h2>
+
+          <ul class="menu_items">
+            <img src="img/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="index.html" class="nav_link">Inicio</a></li>
+            <li><a href="calculadora.html" class="nav_link">Calculadora</a></li>
+            <li><a href="historia.html" class="nav_link">Historia</a></li>
+            <li><a href="tutoriales.html" class="nav_link">Tutoriales</a></li>
+            <li><a href="mas.html" class="nav_link">Más</a></li>
+          </ul>
+          <img src="img/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+    </main>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        .display {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            padding: 15px;
+            font-size: 1rem;
+            background: #007BFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        button.operation {
+            background: #28a745;
+        }
+        button.operation:hover {
+            background: #1e7e34;
+        }
+        button.clear {
+            background: #dc3545;
+        }
+        button.clear:hover {
+            background: #bd2130;
+        }
+  </style>
+  <div class="calculator">
+    <input type="text" class="display" id="display" readonly>
+    <div class="buttons">
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button class="operation" onclick="appendValue('/')">÷</button>
+       
+                  <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button class="operation" onclick="appendValue('*')">×</button>
+       
+                  <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button class="operation" onclick="appendValue('-')">−</button>
+       
+                  <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button class="operation" onclick="calculate()">=</button>
+      <button class="operation" onclick="appendValue('+')">+</button>
+       
+                  <button class="clear" onclick="clearDisplay()">C</button>
+      <button onclick="appendValue('Math.sqrt(')">√</button>
+      <button onclick="appendValue('**2')">x²</button>
+      <button onclick="appendValue('**3')">x³</button>
+       
+                  <button onclick="appendValue('Math.sin(')">sin</button>
+      <button onclick="appendValue('Math.cos(')">cos</button>
+      <button onclick="appendValue('Math.tan(')">tan</button>
+      <button onclick="appendValue('Math.pow(')">x<sup>y</sup></button>
+    </div>
+  </div>
+    <script>
+        function appendValue(value) {
+            const display = document.getElementById('display');
+            display.value += value;
+        }
+ 
+        function clearDisplay() {
+            const display = document.getElementById('display');
+            display.value = '';
+        }
+ 
+        function calculate() {
+            const display = document.getElementById('display');
+            try {
+                // Evaluamos la expresión
+                display.value = eval(display.value);
+            } catch (error) {
+                alert('Entrada inválida');
+                clearDisplay();
+            }
+        }
+        const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+      
+    </script>
+  </body>
+</html>

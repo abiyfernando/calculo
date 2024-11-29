@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+    <main class="lol">
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="index.html">Calculo Diferencial</a></h2>
+
+          <ul class="menu_items">
+            <img src="img/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="#" class="nav_link">Inicio</a></li>
+            <li><a href="calculadora.html" class="nav_link">Calculadora</a></li>
+            <li><a href="historia.html" class="nav_link">Historia</a></li>
+            <li><a href="tutoriales.html" class="nav_link">Tutoriales</a></li>
+            <li><a href="mas.html" class="nav_link">Más</a></li>
+          </ul>
+          <img src="img/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+
+      <!-- Hero Start -->
+      <section class="hero">
+        <div class="row container">
+          <div class="column">
+            <h2>¡Aprende Calculo <br />De la mejor forma!</h2>
+            <p>En esta pagina, podras encontrar una gran variedad de informacion, videos tutoriales, datos, consejos y mas sobre la historia del calculo.
+            ¿Necesitas ayuda? usa nuestro sitio web para asesorarte de la mejor forma.</p>
+            <div class="buttons">
+              <button class="btn">Read More</button>
+              <button class="btn">Contact Us</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="img/calculo.jpg" alt="heroImg" class="hero_img" />
+          </div>
+        </div>
+        <img src="img/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+  </body>
+</html>

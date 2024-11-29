@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="index.html">Calculo Diferencial</a></h2>
+
+          <ul class="menu_items">
+            <img src="img/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="index.html" class="nav_link">Inicio</a></li>
+            <li><a href="calculadora.html" class="nav_link">Calculadora</a></li>
+            <li><a href="historia.html" class="nav_link">Historia</a></li>
+            <li><a href="tutoriales.html" class="nav_link">Tutoriales</a></li>
+            <li><a href="mas.html" class="nav_link">Más</a></li>
+          </ul>
+          <img src="img/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+    </main>
+    <div class="cont">
+        <h1 class="tit">Calculo Integral</h1>
+        <img class="imagen"src="img/ci.jpg" alt="Descripción de la imagen">
+        <div class="sexion">
+            <h3 class="textito">Símbolo de la integral</h3>
+            <p class="parrafo">La integral se denota comúnmente con el símbolo ∫, que proviene del latín «sumatoria». La notación completa incluye la función a integrar, los límites de integración y el elemento diferencial, por ejemplo:</p>
+            <img class="imagen" src="img/integral.jpg">
+        </div>
+        <div class="sexion">
+            <h3 class="textito">Función a integrar</h3>
+            <p class="parrafo">La función que se está integrando es el elemento central de la integral. Puede ser una función continua o discontinua en el intervalo de integración.</p>
+        </div>
+        <div class="sexion">
+          <h3 class="textito">Elemento diferencial</h3>
+            <p class="parrafo">Este es el diferencial de la variable de integración. En una integral definida, se multiplica la función por este elemento diferencial. Comúnmente se denota como dx en una integral con respecto a x, dy en una integral con respecto a y, etc.</p>
+        </div>
+        <div class="sexion">
+        <h3 class="textito">Suma de Riemann</h3>
+            <p class="parrafo">Una suma de Riemann es una aproximación del área bajo la curva, al dividirla en varias formas simples tales como rectángulos o trapecios, permitiendo usarla para encontrar una aproximación numérica en una integral definida.</p>
+        </div>
+        <div class="sexion">
+            <h3 class="textito">Desarrollo del cálculo integral</h3>
+            <p class="parrafo">Cuando hablamos de la historia del calculo integran debemos remontarnos  a la época de Arquímedes aproximadamente entre 287 y 212 a.C., este matemático obtuvo los primeros resultados del valor del área encerrada por un segmento parabólico.
+            Pero no es veinte siglos después donde para resolver otros problemas asociados a estudios no concluidos, es que aparecen las derivas asociado a la definición del cálculo infinitesimal creado por Barrow, Newton y Leibniz, dando pie posteriormente a las integrales.</p>
+        </div>
+    </div>
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+  </body>
+</html>

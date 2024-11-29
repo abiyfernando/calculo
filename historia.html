@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="index.html">Calculo Diferencial</a></h2>
+
+          <ul class="menu_items">
+            <img src="img/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="index.html" class="nav_link">Inicio</a></li>
+            <li><a href="calculadora.html" class="nav_link">Calculadora</a></li>
+            <li><a href="historia.html" class="nav_link">Historia</a></li>
+            <li><a href="tutoriales.html" class="nav_link">Tutoriales</a></li>
+            <li><a href="mas.html" class="nav_link">Más</a></li>
+          </ul>
+          <img src="img/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+    </main>
+    <div class="cont">
+        <h1 class="tit">Calculo integral: Su historia</h1>
+        <img class="imagen"src="img/ci2.jpg" alt="Descripción de la imagen">
+        <div class="sexion">
+            <h3 class="textito">¿Que es el calculo integral?</h3>
+            <p class="parrafo">El cálculo integral es una rama de las matemáticas en el proceso de integración o antiderivación, es muy común en la ingeniería y en la matemática en general y se utiliza principalmente para el cálculo de áreas y volúmenes de regiones y sólidos de revolución.
+
+            Fue usado por primera vez por científicos como Arquímedes, René Descartes, Isaac Newton, Gottfried Leibniz e Isaac Barrow. Los trabajos de este último y los aportes de Newton generaron el teorema fundamental del cálculo integral, que propone que la derivación y la integración son procesos inversos. 
+
+            La integral definida de una función representa el área limitada por la gráfica de la función, con signo positivo cuando la función toma valores positivos y negativo cuando toma valores negativos. </p>
+        </div>
+        <div class="sexion">
+            <h3 class="textito">Origen</h3>
+            <p class="parrafo">El cálculo integral tiene su origen en el estudio del área de figuras planas; las fórmulas para el cálculo de las áreas de triángulos y rectángulos eran ya conocidas en la Grecia clásica, así como la de los polígonos regulares previa descomposición en triángulos. El problema se plantea a la hora de calcular áreas de figuras limitadas por líneas curvas. Euclides (300 a.C.) sigue los trabajos de Eudoxio (400-355 a.C.) para calcular el área del círculo por el método de exhaución, es decir, inscribiendo en él sucesivamente polígonos con más lados. La suma de estas áreas se aproximaba cada vez más al área del círculo, estando en el «límite» el valor exacto. Demostró además que, dados dos círculos de áreas A1 y A2 y radios 1 r y 2 r , se verificaba que 2 2 2 1 2 1 r r A A = y que 2 A = kr , siendo k una constante que Arquímedes llamó p y cuyo valor dijo hallarse entre 7 22 > p > 71 223 . Arquímedes (287-212 a.C.) halló también el área encerrada por un arco de parábola y la cuerda correspondiente, cosa realmente difícil en aquel tiempo, ya que no se disponía del álgebra formalizada ni de la geometría analítica.</p>
+        </div>
+        <div class="sexion">
+            <h3 class="textito">Avances</h3>
+            <p class="parrafo">Desde los griegos hasta el siglo XVII poco se hizo con relación al cálculo de áreas y volúmenes de figuras limitadas por líneas o superficies cerradas. Pascal, Fermat y Leibniz comienzan un estudio engarzado con el cálculo diferencial; así pues, aunque históricamente se estudian los primeros elementos del cálculo integral antes que el diferencial, en el siglo XVII se estudian y configuran a la par, relacionándose por medio de muchos e importantes 14 Introducción al cálculo integral resultados. Por esto la mayoría de los autores empiezan exponiendo, en primer lugar, al menos, las primeras nociones de cálculo diferencial, antes de comenzar el estudio del cálculo integral.</p>
+        </div>
+    </div>
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
+  </body>
+</html>
